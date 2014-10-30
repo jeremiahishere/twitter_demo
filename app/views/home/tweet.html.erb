@@ -1,8 +1,13 @@
 <h1>Tweet here</h1>
 
+<%= form_tag(tweet_path, :remote => true) do |f| %>
+  <%= text_area_tag "Full Text" %>
+  <%= submit_tag "Tweet" %>
+<% end %>
+
 <% @tweets.each do |tweet| %>
   <div>
-    <%= tweet.tweeted_at %>: <%= tweet.full_text %>
+    <%= tweet.tweeted_at.to_s %>: <%= tweet.full_text %>
   </div>
   <hr />
 <% end %>
