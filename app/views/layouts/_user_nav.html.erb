@@ -1,0 +1,17 @@
+<div>
+  <% if current_user %>
+    <div>
+      Welcome <%= current_user.email %>
+      <% if current_user.identity.twitter? %>
+        currently signed in with Twitter
+      <% end %>
+    </div>
+    <div>
+      <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
+    </div>
+  <% else %>
+    <div>
+      <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+    </div>
+  <% end %>
+</div>

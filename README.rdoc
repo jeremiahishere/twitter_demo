@@ -1,0 +1,11 @@
+Twitter demo app
+
+Use Oauth to sign in with twitter
+Read tweets mentioning your user and replay to them
+
+Setup
+
+    bundle install
+    copy app consumer key and secret key to config (see secrets.yml)
+    bundle exec rake db:create db:migrate
+    bundle exec rails s

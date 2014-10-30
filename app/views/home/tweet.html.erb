@@ -1,0 +1,8 @@
+<h1>Tweet here</h1>
+
+<% @tweets.each do |tweet| %>
+  <div>
+    <%= tweet.tweeted_at %>: <%= tweet.full_text %>
+  </div>
+  <hr />
+<% end %>
