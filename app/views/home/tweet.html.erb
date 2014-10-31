@@ -5,9 +5,9 @@
   <%= submit_tag "Tweet" %>
 <% end %>
 
-<% @tweets.each do |tweet| %>
-  <div>
-    <%= tweet.tweeted_at.to_s %>: <%= tweet.full_text %>
-  </div>
-  <hr />
-<% end %>
+<h1>Old tweets</h1>
+<ul>
+  <% @tweets.each do |tweet| %>
+    <li><%= tweet.tweeted_at.to_s %>: <%= tweet.full_text %></li>
+  <% end %>
+</ul>
